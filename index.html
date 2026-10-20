@@ -2809,12 +2809,11 @@
       setProgress("Prop " + (quizState.propIdx + 1) + " of " + total + " · Your result", pct);
       var html = '<div class="quiz-card"><div class="quiz-kicker">Proposition ' + p.n + ' · What your answers say</div>' +
         '<h2>' + esc(p.title) + '</h2>' +
-        '<div class="lean-box ' + lean.key + '"><strong style="font-size:19px">' + esc(lean.label) + '</strong><p style="margin:6px 0 0">' + esc(lean.text) + '</p></div>' +
-        '<h3 style="font-size:16px">Based only on these answers from you:</h3><ul class="answer-recap">';
+                '<h3 style="font-size:16px">Based only on these answers from you:</h3><ul class="answer-recap">';
       a.forEach(function (e) { html += '<li><strong>' + esc(e.label) + '</strong>, in answer to: ' + esc(e.q) + '</li>'; });
       html += '</ul>';
       if (p.n === "40" || p.n === "41" || p.n === "42") html += '<div class="quiz-fact"><p><strong>Remember the interaction:</strong> if Prop 41 or Prop 42 passes with more yes votes than Prop 40, courts could void Prop 40 even if Prop 40 passes. Your calls on these three work together.</p></div>';
-      html += '<h3 style="font-size:16px">Your decision on Prop ' + p.n + '</h3><p style="color:var(--ink-soft);font-size:14.5px;margin:0">The lean above is a summary of your answers, not an instruction. Set your own call, it is what appears in your final list.</p>' +
+      html += '<div class="lean-box ' + lean.key + '"><strong style="font-size:19px">' + esc(lean.label) + '</strong><p style="margin:6px 0 0">' + esc(lean.text) + '</p></div>' +'<h3 style="font-size:16px">Your decision on Prop ' + p.n + '</h3><p style="color:var(--ink-soft);font-size:14.5px;margin:0">The lean above is a summary of your answers, not an instruction. Set your own call, it is what appears in your final list.</p>' +
         '<div class="quiz-nav" role="group" aria-label="Your decision on Proposition ' + p.n + '">' +
         '<button class="btn" data-call="yes" type="button">Vote Yes</button><button class="btn" data-call="no" type="button">Vote No</button><button class="btn" data-call="und" type="button">Still deciding</button></div>' +
         '<label style="display:block;font-weight:700;font-size:14px;margin-top:14px">Your note (optional)<textarea class="quiz-note" id="qzNote" rows="2" placeholder="Anything you want to remember about this one">' + esc(notes[p.n] || "") + '</textarea></label>' +
