@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Los Angeles County and City Measures · November 2026 Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4f4f1;
+        --surface: #ffffff;
+        --surface-2: #eceee9;
+        --ink: #1b1e24;
+        --ink-soft: #454b54;
+        --ink-faint: #6d747e;
+        --line: #d8dad3;
+        --navy: #173d6b;
+        --navy-soft: #e3eaf3;
+        --gold: #9a6d14;
+        --gold-soft: #f5ecd4;
+        --red: #a92c1c;
+        --red-soft: #f9e6e2;
+        --green: #2c6e35;
+        --green-soft: #e2efe3;
+        --radius: 10px;
+        --shadow: 0 1px 2px rgba(20, 24, 30, .06), 0 4px 14px rgba(20, 24, 30, .05);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #12151a;
+          --surface: #1b1f27;
+          --surface-2: #232833;
+          --ink: #e9ebee;
+          --ink-soft: #b6bcc5;
+          --ink-faint: #8a919c;
+          --line: #313845;
+          --navy: #8fb3e2;
+          --navy-soft: #22334d;
+          --gold: #dcb45e;
+          --gold-soft: #3a3018;
+          --red: #f0927f;
+          --red-soft: #43231e;
+          --green: #8fce97;
+          --green-soft: #22392a;
+          --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      h1, h2, h3, .serif { font-family: "Newsreader", Georgia, serif; }
+      a { color: var(--navy); }
+      .wrap { max-width: 920px; margin: 0 auto; padding: 0 18px 90px; }
+
+      /* ---------- top bar ---------- */
+      .topbar {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar-inner {
+        max-width: 920px; margin: 0 auto; padding: 8px 18px;
+        display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      }
+      .topbar .brand { font-weight: 800; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+      .topbar .brand span { color: var(--gold); }
+      .jumpnav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+      .jumpnav a {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-width: 30px; height: 30px; padding: 0 7px;
+        border: 1px solid var(--line); border-radius: 999px;
+        background: var(--surface); color: var(--ink);
+        font-size: 13px; font-weight: 700; text-decoration: none;
+      }
+      .jumpnav a:hover { border-color: var(--navy); color: var(--navy); }
+      .jumpnav a.done { background: var(--navy); border-color: var(--navy); color: #fff; }
+      @media (prefers-color-scheme: dark) { .jumpnav a.done { color: #10141c; } }
+      .decided-count { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+
+      /* ---------- hero ---------- */
+      .hero { padding: 24px 0 8px; }
+      .hero .date-line {
+        font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--gold);
+      }
+      .hero h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.04; margin: 10px 0 14px; font-weight: 800; }
+      .hero .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--ink-soft); max-width: 46em; margin: 0 0 20px; }
+      .logistics {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 22px 0 6px;
+      }
+      .logistics .cell {
+        background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 12px 14px; box-shadow: var(--shadow);
+      }
+      .logistics .k { font-size: 11.5px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); }
+      .logistics .v { font-weight: 700; font-size: 15px; margin-top: 3px; }
+      .logistics .v small { font-weight: 500; color: var(--ink-soft); display: block; font-size: 13px; margin-top: 2px; }
+
+      /* ---------- section heads ---------- */
+      .section-head { margin: 46px 0 6px; }
+      .section-head h2 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 6px; font-weight: 800; }
+      .section-head p { color: var(--ink-soft); margin: 0; max-width: 46em; }
+
+      .chip {
+        display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+        background: var(--surface-2); border: 1px solid var(--line); color: var(--ink-soft); white-space: nowrap;
+      }
+      .chip.flag { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+      .chip.money { background: var(--gold-soft); border-color: var(--gold); color: var(--gold); }
+      .chip.mine-yes { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+      .chip.mine-no { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+      .chip.rel { background: var(--navy-soft); border-color: var(--navy); color: var(--navy); }
+
+      /* ---------- measure articles ---------- */
+      .prop {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+        box-shadow: var(--shadow); padding: 24px; margin-top: 20px; scroll-margin-top: 70px;
+      }
+      .prop header { display: flex; gap: 16px; align-items: flex-start; }
+      .prop .big-num {
+        font-family: "Newsreader", serif; font-weight: 800; font-size: 40px; line-height: .95;
+        color: var(--navy); min-width: 64px;
+      }
+      .prop h2 { font-size: clamp(21px, 3.4vw, 27px); line-height: 1.15; margin: 0 0 4px; font-weight: 800; }
+      .prop .type { font-size: 12.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gold); margin: 0; }
+      .prop .also { font-size: 13.5px; color: var(--ink-faint); margin: 3px 0 0; font-style: italic; }
+      .prop .plain {
+        font-size: 17px; line-height: 1.5; margin: 16px 0 4px;
+        background: var(--navy-soft); border-radius: var(--radius); padding: 14px 16px;
+      }
+      .prop .plain strong { color: var(--navy); }
+      .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; margin-top: 8px; }
+      @media (max-width: 640px) { .fact-grid { grid-template-columns: 1fr; } .prop .big-num { font-size: 32px; min-width: 50px; } }
+      .fact { padding: 12px 0 4px; border-top: 1px solid var(--line); margin-top: 12px; }
+      .fact h3 {
+        font-family: "Public Sans", sans-serif; font-size: 12px; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 6px;
+      }
+      .fact p, .fact li { font-size: 14.5px; color: var(--ink-soft); }
+      .fact p { margin: 0 0 8px; }
+      .fact ul { margin: 0; padding-left: 18px; }
+      .fact li { margin-bottom: 4px; }
+      .fact strong { color: var(--ink); }
+      .wording {
+        margin-top: 14px; border: 1px solid var(--red); background: var(--red-soft);
+        border-radius: var(--radius); padding: 13px 16px; font-size: 14.5px;
+      }
+      .wording .wh { font-weight: 800; color: var(--red); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+      /* ---------- your call ---------- */
+      .yourcall {
+        margin-top: 18px; border-top: 2px dashed var(--line); padding-top: 14px;
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+      }
+      .yourcall .lbl { font-weight: 800; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-faint); width: 100%; }
+      .call-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+      .call-btn {
+        font: inherit; font-weight: 700; font-size: 14.5px; cursor: pointer;
+        padding: 9px 20px; border-radius: 999px; border: 1.5px solid var(--line);
+        background: var(--surface); color: var(--ink);
+      }
+      .call-btn:hover { border-color: var(--navy); }
+      .call-btn[aria-pressed="true"].yes { background: var(--green); border-color: var(--green); color: #fff; }
+      .call-btn[aria-pressed="true"].no { background: var(--red); border-color: var(--red); color: #fff; }
+      .call-btn[aria-pressed="true"].und { background: var(--navy); border-color: var(--navy); color: #fff; }
+      @media (prefers-color-scheme: dark) {
+        .call-btn[aria-pressed="true"].yes, .call-btn[aria-pressed="true"].no, .call-btn[aria-pressed="true"].und { color: #10141c; }
+      }
+      .note-input {
+        flex: 1 1 220px; font: inherit; font-size: 14.5px; padding: 9px 12px;
+        border: 1px solid var(--line); border-radius: var(--radius);
+        background: var(--bg); color: var(--ink);
+      }
+      .note-input::placeholder { color: var(--ink-faint); }
+
+      /* ---------- summary ---------- */
+      .summary-card {
+        background: var(--surface); border: 1.5px solid var(--navy); border-radius: 14px;
+        box-shadow: var(--shadow); padding: 22px; margin-top: 20px;
+      }
+      .summary-card h2 { margin: 0 0 4px; font-size: 26px; }
+      .summary-card .sub { color: var(--ink-soft); margin: 0 0 14px; font-size: 14.5px; }
+      .sum-row {
+        display: flex; gap: 10px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line);
+        font-size: 14.5px; flex-wrap: wrap;
+      }
+      .sum-row .n { font-weight: 800; min-width: 62px; }
+      .sum-row .t { flex: 1 1 240px; color: var(--ink-soft); }
+      .sum-row .note { flex: 1 1 100%; color: var(--ink-faint); font-size: 13.5px; font-style: italic; }
+      .sum-call { font-weight: 800; min-width: 86px; text-align: right; }
+      .sum-call.yes { color: var(--green); } .sum-call.no { color: var(--red); }
+      .sum-call.und { color: var(--navy); } .sum-call.none { color: var(--ink-faint); font-weight: 600; }
+      .dl-btn {
+        font: inherit; font-weight: 700; cursor: pointer; margin-top: 16px;
+        background: var(--navy); color: #fff; border: none; border-radius: 999px; padding: 11px 22px;
+      }
+      @media (prefers-color-scheme: dark) { .dl-btn { color: #10141c; } }
+      .dl-btn.ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); margin-left: 8px; }
+      .session-note { font-size: 12.5px; color: var(--ink-faint); margin-top: 8px; }
+
+      /* ---------- caveats & sources ---------- */
+      .caveats { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; margin-top: 20px; box-shadow: var(--shadow); }
+      .caveats h2 { margin: 0 0 10px; font-size: 24px; }
+      .caveats li { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 7px; }
+      .sources { margin-top: 34px; font-size: 13.5px; color: var(--ink-soft); }
+      .sources h2 { font-size: 20px; color: var(--ink); }
+      .sources li { margin-bottom: 6px; overflow-wrap: anywhere; }
+      .src-note { font-size: 13px; color: var(--ink-faint); }
+      footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-faint); }
+      .cost-line{margin-top:12px;font-size:15px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:var(--radius);padding:11px 14px}
+      .cost-line strong{color:var(--gold)}
+      .more-btn{font:inherit;font-weight:700;font-size:15px;cursor:pointer;width:100%;margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;background:var(--surface);color:var(--navy);border:1.5px solid var(--navy);border-radius:var(--radius);padding:12px 16px}
+      .more-btn:hover{background:var(--navy-soft)}
+      .more-btn .chev{transition:transform .2s;font-size:13px}
+      .more-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+      @media(prefers-reduced-motion:reduce){.more-btn .chev{transition:none}}
+      .btn{font:inherit;font-weight:700;cursor:pointer;border-radius:999px;padding:11px 20px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+      .btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)} @media(prefers-color-scheme:dark){.btn.primary{color:#10141c}}
+      .yesno{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:var(--surface-2);font-size:14.5px}
+      .yesno p{margin:0 0 6px}.yesno p:last-child{margin:0}
+      .yesno .yn-y{color:var(--green);font-weight:800}.yesno .yn-n{color:var(--red);font-weight:800}
+
+      /* ---------- picker ---------- */
+      .picker{background:var(--navy-soft);border:1.5px solid var(--navy);border-radius:14px;padding:20px 22px;margin:6px 0 10px;box-shadow:var(--shadow)}
+      .picker h2{margin:0 0 4px;font-size:24px}
+      .picker .sub{margin:0 0 14px;color:var(--ink-soft);font-size:14.5px;max-width:46em}
+      .pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+      .pick-btn{font:inherit;text-align:left;cursor:pointer;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+      .pick-btn strong{display:block;font-size:15.5px;margin-bottom:2px}
+      .pick-btn span{font-size:13px;color:var(--ink-soft)}
+      .pick-btn:hover{border-color:var(--navy)}
+      .pick-btn[aria-pressed="true"]{border-color:var(--navy);background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--navy)}
+      .pick-result{margin:14px 0 0;font-size:15px;display:none}
+      .pick-result.show{display:block}
+      .scope-note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:14px 16px;margin-top:20px;font-size:15px;display:none}
+      .scope-note.show{display:block}
+      .check-banner{margin-top:12px;border:1px solid var(--gold);background:var(--gold-soft);border-radius:var(--radius);padding:11px 14px;font-size:14.5px;display:none}
+      .check-banner.show{display:block}
+      .backlink-panel{margin:4px 0 26px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;box-shadow:var(--shadow)}
+      .backlink-panel .t{flex:1 1 280px;font-size:15px;color:var(--ink-soft)}
+      .backlink-panel .t strong{color:var(--ink);display:block;font-family:"Newsreader",Georgia,serif;font-size:19px}
+      @media print{
+        .topbar,.picker,.yourcall,.more-btn,.dl-btn,.backlink-panel,.no-print{display:none!important}
+        body{background:#fff}
+        .wrap{max-width:none;padding:0}
+        .prop-details{display:block!important}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">CA Ballot <span>·</span> Nov 3, 2026</div>
+        <div class="decided-count" id="decidedCount">0 of 10 decided</div>
+        <nav class="jumpnav" id="jumpnav" aria-label="Jump to a measure"></nav>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="hero">
+        <div class="backlink-panel">
+          <div class="t"><strong>Statewide propositions live on the main guide</strong>The 14 state propositions, with the quiz, are on the companion page. This page covers only the county, city, and school district measures below.</div>
+          <a class="btn primary" href="/" style="text-decoration:none">Open the statewide guide</a>
+        </div>
+        <div class="date-line">General Election · Tuesday, November 3, 2026</div>
+        <h1>Your county and city measures, in plain English.</h1>
+        <p class="lede">Below the statewide propositions, Los Angeles ballots carry local measures that get far less attention and are often worded just as carefully. This page breaks down the two Los Angeles County measures and the eight City of Los Angeles measures: what each one actually does, what the official analyses say it will cost, who put it on the ballot, who is for and against it, and where the wording deserves a second look.</p>
+        <div class="logistics">
+          <div class="cell"><div class="k">County measures</div><div class="v">2, on every LA County ballot<small>Measures A and E are decided by all county voters</small></div></div>
+          <div class="cell"><div class="k">City measures</div><div class="v">8, City of Los Angeles only<small>Decided only by voters inside the City of Los Angeles</small></div></div>
+          <div class="cell"><div class="k">School measure</div><div class="v">1 of the 8 is an LAUSD vote<small>Charter Amendment SC appears on Los Angeles Unified ballots</small></div></div>
+          <div class="cell"><div class="k">Mail deadline</div><div class="v">Postmarked by Nov 3<small>Counts if received by November 10</small></div></div>
+        </div>
+      </section>
+
+      <section class="picker" id="picker">
+        <h2>Which of these are on your ballot?</h2>
+        <p class="sub">Local measures depend on where you live. Pick the option that fits, and this page will show only the measures you actually vote on. Nothing is typed, stored, or sent anywhere; the choice stays on your device, like everything else on this site.</p>
+        <div class="pick-grid">
+          <button class="pick-btn" type="button" data-pick="lacity" aria-pressed="false"><strong>I vote in the City of Los Angeles</strong><span>All 10 measures on this page are on your ballot: 2 county, 8 city.</span></button>
+          <button class="pick-btn" type="button" data-pick="county" aria-pressed="false"><strong>Another LA County city, or unincorporated county</strong><span>The 2 county measures are on your ballot. Your own city may have measures too; see the note below.</span></button>
+          <button class="pick-btn" type="button" data-pick="outside" aria-pressed="false"><strong>I do not vote in LA County</strong><span>None of these measures are on your ballot. Your county has its own local measures.</span></button>
+        </div>
+        <p class="pick-result" id="pickResult" role="status"></p>
+      </section>
+
+      <div class="scope-note" id="countyNote">
+        <strong>Your own city measures are not covered here.</strong> Los Angeles County has dozens of city, school, and special district measures on this ballot, and each city votes on its own list. To see everything on your exact ballot, use the official lookup from the <a href="https://www.lavote.gov" target="_blank" rel="noopener">Los Angeles County Registrar</a>, where you can pull up your sample ballot. One measure below, Charter Amendment SC, is flagged on its card: it is on your ballot only if your home is inside the Los Angeles Unified School District, which reaches beyond the City of Los Angeles into parts of other cities.
+      </div>
+      <div class="scope-note" id="outsideNote">
+        <strong>These measures are not on your ballot.</strong> This page covers Los Angeles County and the City of Los Angeles only. Your own county, city, and school district measures are listed in your county voter guide and on your sample ballot. The <a href="/">statewide propositions guide</a> still applies to you: the 14 state propositions are the same for every California voter.
+      </div>
+
+      <section>
+        <div class="section-head">
+          <h2>Los Angeles County measures</h2>
+          <p>These two appear on every ballot in Los Angeles County, whichever city you live in. Both are Charter amendments and both pass with a simple majority.</p>
+        </div>
+
+        <article class="prop" id="m-a" data-scope="county" data-mid="a">
+          <header>
+            <div class="big-num">A</div>
+            <div>
+              <p class="type">Los Angeles County · Charter Amendment · Majority to pass</p>
+              <h2>Binding arbitration for public safety labor disputes</h2>
+              <p class="also">Official title: Charter Amendment Reiterating Good Faith Negotiation Obligations and Establishing Impartial Binding Arbitration for Certified Public Safety Employee Disputes</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> When contract talks between the County and its public safety unions reach a deadlock, the final decision would move from the elected Board of Supervisors to a three member arbitration panel whose ruling cannot be overturned. It covers 14 bargaining units, about 16,535 firefighters, sheriff's deputies, lifeguards, DA investigators, medical examiner staff, and related civilian employees. The measure also writes a strike ban for those workers into the County Charter.</div>
+          <div class="cost-line"><strong>The money:</strong> The County Auditor-Controller says the arbitration process itself could cost from tens of thousands to millions of dollars, and the pay and benefits it would govern cost about $4.1 billion a year. The same office states plainly that it has no basis to predict whether arbitration would raise or lower future labor costs.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> Deadlocks go to binding arbitration. The panel picks one side's final offer on each disputed issue and its decision is final. Strikes by covered employees are banned, and strikers can be fired.</p>
+            <p><span class="yn-n">A No vote means:</span> Nothing changes. After mediation and fact finding, the Board of Supervisors keeps the power to impose its own last, best, and final offer.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li>The panel has three members: one chosen by the County, one by the union, and one neutral chair. The County and the union split the cost of arbitration.</li>
+                  <li>Firefighters and peace officers are already barred from striking under state law. The Charter strike ban is genuinely new only for DA investigators, medical examiners, lifeguards, supervisors, and civilian staff.</li>
+                  <li>Results could spread beyond these unions: parity clauses in other County labor agreements can carry arbitration outcomes to employees this measure does not cover, in amounts the Auditor-Controller says cannot be estimated.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The Board of Supervisors, on a motion by Supervisors Lindsey Horvath and Hilda Solis. The final ordinance passed 4 to 1 on August 4, 2026, with Supervisor Holly Mitchell voting no. The covered unions had already launched their own signature drive to put a version before voters, and supervisors said they preferred a Board drafted version they could shape.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>LA County Firefighters Local 1014, the Association for Los Angeles Deputy Sheriffs (ALADS), and the LA/OC Building Trades Council, per the Registrar. Their argument: employees who are barred from striking have no remedy if the County refuses to negotiate; neutral experts should decide fair pay, and arbitration helps recruitment during understaffing. The yes committee raised about $6.2 million through September 19, 2026, almost all of it from the covered unions.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was filed, and no opposition committee has reported. The main critics are Supervisor Holly Mitchell, who voted no and argues arbitrators are not elected and do not weigh countywide tradeoffs; the Acting County CEO, whose memo warned large awards could grow unfunded pension liabilities and hurt the County credit rating; and the Los Angeles Daily News editorial board, which recommends no, calling it too great a fiscal threat to already strained County finances.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>This is not the Measure A from 2024. That one was a half cent sales tax for homelessness services and affordable housing; this one has nothing to do with taxes. The title leads with "reiterating good faith negotiation obligations," which changes nothing, since that duty already exists in law. The real change, handing final say over roughly $4.1 billion a year in pay and benefits to arbitrators, sits behind the phrase "impartial binding arbitration," and two of the three panel members are picked by the two sides. The ballot question never says the panel's decisions cannot be overturned by the Board or by voters.</div>
+            <p class="src-note">Sources: LA County Registrar, Measures Appearing on the Ballot; County Auditor-Controller fiscal impact statement for Measure A; argument in favor filed with the Registrar; CityHallPass compilation of campaign filings.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-e" data-scope="county" data-mid="e">
+          <header>
+            <div class="big-num">E</div>
+            <div>
+              <p class="type">Los Angeles County · Charter Amendment · Majority to pass</p>
+              <h2>Ethics Commission rules, and saving the Measure J funding promise</h2>
+              <p class="also">Official title: County of Los Angeles Ethics Commission and Community Investment Budget Allocation Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> One vote does two unrelated things. It writes the detailed rules for the County Ethics Commission into the Charter, including a guaranteed budget of at least $14.3 million a year. And it rescues the voter approved Measure J funding rule from 2020, which a drafting error in 2024's Measure G would otherwise repeal starting in 2028.</div>
+          <div class="cost-line"><strong>The money:</strong> The ethics bodies get a guaranteed minimum budget of $14.3 million a year from fiscal 2027-28, rising annually with inflation or income growth. The Auditor-Controller notes the measure names no funding source, so it requires new revenue, cuts elsewhere, or both. The Measure J set aside it preserves, at least 10 percent of locally generated unrestricted revenue, is about $288.3 million a year and continues an existing allocation.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The Ethics Commission, its compliance office, and its officer get the Charter structure and guaranteed budget in the measure, and the 10 percent community investment commitment continues, binding the Board and the future elected County Executive, who could not veto it.</p>
+            <p><span class="yn-n">A No vote means:</span> The Ethics Commission keeps its current structure, and because of the Measure G drafting error, the Measure J funding requirement is repealed starting in 2028. A no vote does not preserve the current funding rule.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li>Voters created the Ethics Commission in Measure G (2024). Measure E sets how its seven commissioners are appointed, their qualifications, terms, removal, and activity limits, plus the Commission's investigative and enforcement powers.</li>
+                  <li>The Board can go below the $14.3 million budget floor only by finding exigent circumstances, with a four fifths vote (seven ninths after January 1, 2032).</li>
+                  <li>Measure J (2020) requires at least 10 percent of the County's locally generated unrestricted revenues to fund community investment and alternatives to incarceration. Measure G (2024) accidentally scheduled that requirement for repeal when the elected County Executive takes office in 2028. Measure E moves it to a new Charter section so it continues.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The Board of Supervisors. The motion to fix the Measure J error was co-authored by Supervisors Holly Mitchell and Lindsey Horvath, and the final ordinance was adopted on July 28, 2026.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by the League of Women Voters of Los Angeles County, the California Clean Money Campaign, Supervisor Lindsey Horvath, California Common Cause, and the AAPI Equity Alliance. Their case: an independent commission with real power to investigate and punish ethics, campaign finance, lobbying, and conflict of interest violations strengthens accountability, and the measure restores a voter approved provision that was removed by accident. The LA County Democratic Party also endorses it.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was submitted, and there is no significant opposition committee. UNITE HERE Local 11's voter guide recommends no, opposing what it calls unelected bureaucracies. The Daily News editorial position is that Measure E creates new spending, and the League of Women Voters' own pros and cons summary records the cost objection: dozens of new employees and rising costs that must be offset elsewhere.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>Two subjects, one vote. An ethics commission's structure and a budget set aside worth about $288.3 million a year are bundled together, a combination the County's own governance reform task force presentation flags. The phrase "continue uninterrupted the County's commitment" never states that the commitment is 10 percent of unrestricted local revenue. Neither the title nor the question mentions the guaranteed $14.3 million a year ethics budget with automatic increases. And the argument in favor says Measure E "creates" the Ethics Commission; voters already created it in 2024.</div>
+            <p class="src-note">Sources: County Counsel impartial analysis of Measure E; LA County Registrar, Measures Appearing on the Ballot; County Auditor-Controller fiscal impact statement.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="citySection">
+        <div class="section-head">
+          <h2>City of Los Angeles measures</h2>
+          <p>These eight appear only on ballots inside the City of Los Angeles. Six are Charter amendments from the 2025-26 charter reform process, one is a City Council proposition, one is a citizen initiative, and one of the eight, Charter Amendment SC, is voted on by the whole Los Angeles Unified School District. All pass with a simple majority.</p>
+        </div>
+
+        <article class="prop" id="m-te" data-scope="city" data-mid="te">
+          <header>
+            <div class="big-num">TE</div>
+            <div>
+              <p class="type">City of Los Angeles · Proposition · Majority to pass</p>
+              <h2>Transfer tax exemption for Palisades Fire victims</h2>
+              <p class="also">Official title: Property Transfer Tax Exemption for Victims of January 2025 Fire Disaster</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> Proposition ULA, passed in 2022, taxes high value property sales to fund affordable housing and tenant assistance. TE carves out one exemption: a home damaged or destroyed in the Palisades Fire pays no ULA tax on its first sale, if the seller owned it on the day the fire began and sells by January 6, 2030. Owners who already sold and paid can claim a refund.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer estimates $35 million to $66 million less ULA revenue through January 2030, taken from the House LA Fund that pays for affordable housing and homelessness prevention. There is no effect on the City's General Fund, and the regular 0.45 percent city transfer tax still applies. A separate Housing Department estimate ran higher, about $32 million a year.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> Qualifying sales of Palisades Fire damaged or destroyed homes get the one time ULA exemption, or a refund if the tax was already paid.</p>
+            <p><span class="yn-n">A No vote means:</span> Those sales remain fully subject to the Proposition ULA tax.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li>ULA charges 4 percent on sales above $5 million and 5.5 percent at $10 million or more; the thresholds have since adjusted to $5.4 million and $10.9 million. Only sales above those lines owe the tax at all.</li>
+                  <li>The property must be residential, verified as damaged or destroyed by the Department of Building and Safety, and sold between January 7, 2025 and January 6, 2030 by the person who owned it on January 7, 2025. One exemption per property.</li>
+                  <li>The Palisades Fire damaged or destroyed about 5,620 structures, roughly 5,495 of them residential, per Building and Safety figures in the official analysis.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, by a 13 to 1 vote on July 1, 2026. Councilmember Traci Park, who represents Pacific Palisades, championed it, and Mayor Karen Bass had requested a similar exemption in October 2025. Councilmember Eunisses Hernandez cast the lone no vote.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Councilmember Traci Park, Mayor Karen Bass, Council President Marqueece Harris-Dawson, Councilmember Monica Rodriguez, State Senator Ben Allen, Assemblymember Jacqui Irwin, LAUSD Board Member Nick Melvoin, the building trades and carpenters unions, and the Pacific Palisades Community Council. Their case: ULA was never intended to penalize disaster survivors; people who lost everything should not owe a large transfer tax on top of insurance shortfalls, and the exemption is narrow, one time, and does not repeal ULA.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was filed for the pamphlet. Councilmember Eunisses Hernandez, the lone no vote on placing it on the ballot, argued any exemption should cover only homeowners whose primary residence was destroyed, and called it a loophole for the ultra wealthy that reduces funding for affordable housing and tenant protections. The LA Forward voter guide recommends no on the same grounds.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>The ballot question never mentions the $5 million threshold, so a voter could read it as relief for every fire victim, when the benefit flows only to high value sales, the only ones that owe this tax. It never mentions that the seller must have owned the property on the day of the fire, so someone who bought a burned lot afterward gets nothing. It never mentions the refunds for tax already paid. "Residential properties" is broader than homeowners: it includes multifamily buildings and rental properties, with no requirement that the owner lived there, so an investor or LLC that owned a rental on January 7, 2025 can qualify. And despite the title's "January 2025 Fire Disaster," the measure covers only the Palisades Fire.</div>
+            <p class="src-note">Sources: LA City Clerk, Measure TE pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed arguments); LA County Registrar.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-la" data-scope="city" data-mid="la">
+          <header>
+            <div class="big-num">LA</div>
+            <div>
+              <p class="type">City of Los Angeles · Charter Amendment · Majority to pass</p>
+              <h2>Infrastructure, budget, finance, and contracting</h2>
+              <p class="also">Official title: City Infrastructure, Budget, Finance, and Contracting Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> A bundle of City Hall machinery changes sold mainly as planning reform: a two year budget and a required long term capital infrastructure plan. The same single vote also concentrates Public Works power in one Director, lets the Council abolish the Board of Public Works, repeals the Charter bans on the City mortgaging its own property and running commercial businesses without voter approval, and loosens several contracting rules. You cannot split the bundle.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer estimates $4 million to $6 million in one time General Fund costs to switch to a two year budget and set up the capital plan. The financial impact of the contracting, mortgage, and business changes, in the CAO's words, cannot be quantified at this time.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> All six changes in the breakdown below take effect together.</p>
+            <p><span class="yn-n">A No vote means:</span> The City keeps its one year budget, the Board of Public Works stays as is, and the Charter bans on mortgaging City property and on City run commercial enterprises without voter approval stay in place.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>What changes, item by item</h3>
+                <ul>
+                  <li><strong>Two year budget.</strong> The annual budget becomes a two year cycle. The Mayor submits by April 1, the Council approves by June 1, and each year's appropriation is set by resolution. A different cycle can later be set by ordinance.</li>
+                  <li><strong>Capital Infrastructure Plan.</strong> The City must adopt a long term plan for roads, parks, bridges, and buildings by ordinance. The plan's scope, funding, and reporting are left to that future ordinance; this measure appropriates no money.</li>
+                  <li><strong>Public Works power shifts.</strong> The Director of Public Works gains direct authority over construction, contract administration, street permits, and budget recommendations. The Council may change or eliminate the Board of Public Works entirely by ordinance.</li>
+                  <li><strong>Two Charter bans repealed.</strong> The rule that the City "shall have no power to mortgage its property" is repealed, and so is the rule barring the City from running purely commercial or industrial enterprises without a majority vote of the voters.</li>
+                  <li><strong>Bidding loosened.</strong> New exceptions cover software bought from its manufacturer, and the Council may exempt "critical infrastructure" contracts, defined by security, public health, or safety, from competitive bidding by ordinance.</li>
+                  <li><strong>Bid paperwork.</strong> Minor technical errors in bid forms may be waived or corrected; errors in ethics forms may not be waived.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, from the Charter Reform Commission's April 2026 recommendations. The Public Works parts were the contested ones, passing committee 9 to 6.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by City Controller Kenneth Mejia, Councilmembers Katy Yaroslavsky and Bob Blumenfield, former Controller Ron Galperin, and advocates from Investing in Place, LA Forward, and Streets For All. Their case: streets, sidewalks, and streetlights take years to fix because the City fails to plan; it needs long term infrastructure planning, two year budgeting, and one accountable Director.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>The filed argument against is signed solely by Councilmember Monica Rodriguez. Her case: after repeated corruption scandals, the City should not remove independent oversight. The Board of Public Works provides public, open meeting review of contracting, a capital plan could be adopted without a Charter amendment, and this measure weakens a check on billions in public works dollars.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>The title sounds like housekeeping. The most consequential items are the two repeals: a yes vote ends the Charter rule that the City cannot mortgage its property at all, and ends the requirement that voters approve City run businesses. The capital plan is a requirement to have a plan, with no funding attached. The "critical infrastructure" bidding exemption is broad, and its exact reach will be defined later by ordinance, not by this vote. Even the two year budget is not locked in; the measure lets a future Council change the cycle by ordinance.</div>
+            <p class="src-note">Sources: LA City Clerk 2026 voter information pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, filed arguments); City Council ballot resolution, Council File 26-1100-S11.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-pl" data-scope="city" data-mid="pl">
+          <header>
+            <div class="big-num">PL</div>
+            <div>
+              <p class="type">City of Los Angeles · Charter Amendment · Majority to pass</p>
+              <h2>Planning Department, and who decides land use appeals</h2>
+              <p class="also">Official title: City Planning Department Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> PL rewrites who decides land use appeals in Los Angeles. It abolishes the seven neighborhood based Area Planning Commissions, whose 35 commissioners must live in the area they serve, and replaces them with one citywide appeals commission that rehear cases from scratch. It also makes General Plan Amendments pass automatically if the Council sits on them for 75 days, and lets the Council raise the Charter's building floor area cap by ordinance instead of asking voters.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer anticipates no revenue impact, and estimates commission staffing costs fall by about $360,000 a year, from $1.1 million to $740,000.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The Area Planning Commissions are abolished, appeals move to the new citywide commission, and the process changes in the breakdown below take effect.</p>
+            <p><span class="yn-n">A No vote means:</span> The seven Area Planning Commissions stay, along with the current Council review process and the Charter locked floor area limit.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>What changes, item by item</h3>
+                <ul>
+                  <li><strong>One citywide appeals body.</strong> The seven Area Planning Commissions, in place since 2000, are eliminated. A new Neighborhood Appeals Commission of at least seven members hears appeals de novo, meaning anew, with no deference to the earlier decision. Unlike today's commissioners, its members have no Charter residency requirement; representation rules are left to ordinance.</li>
+                  <li><strong>Staff decide more cases.</strong> Planning Department hearing officers and zoning administrators investigate, hear, and decide quasi-judicial applications.</li>
+                  <li><strong>Rules leave the Charter.</strong> The Charter sections on variances, conditional use permits, and related approvals are repealed, so those processes and appeal rights will be set by ordinance, which future Councils can rewrite without voters.</li>
+                  <li><strong>Deadlines with teeth.</strong> When the Council takes jurisdiction of a commission decision, the commission has 30 days to concur or dissent after a remand, and the Council must act within 21 days or the commission's action becomes final.</li>
+                  <li><strong>Silence becomes approval.</strong> If the Council does not act within 75 days on a General Plan Amendment that both the City Planning Commission and the Mayor recommended, the amendment is deemed approved. Today, inaction means denial.</li>
+                  <li><strong>Floor area cap.</strong> The Charter limit of 13 times a site's buildable area gains the words "unless as otherwise provided by Council," so the Council can raise the ceiling by ordinance. Today it can only make the limit stricter.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, from Charter Reform Commission recommendations adopted in the 2025-26 charter review. The deemed approval clause was reported to be the closest vote in the package.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Raymond Meza, Chair of the Charter Reform Commission, and Roy Samaan, President of the Engineers and Architects Association. Their case: land use decisions have become entangled with politics and special interests; PL creates clearer rules, consistent citywide appeals, and professional staff handling of cases. AIA Los Angeles backed it with reservations about deemed approval by inaction and losing the local residency requirement.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was submitted for the pamphlet, so there is no official opposition argument or signer. The reservations on record come from AIA Los Angeles commentary: approval by silence, and appeals commissioners who no longer have to live in the neighborhoods affected.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>The title, "City Planning Department," reveals almost nothing. A voter could easily miss that a yes vote abolishes all seven local Area Planning Commissions and their residency requirement. The question's phrase "change the timing and process for City Council action" hides the biggest flip: 75 days of Council silence becomes an approval, reversing today's deemed denial. And "allow for changes to floor area regulations by ordinance" means the Council could raise the Charter's 13 to 1 floor area ceiling entirely on its own.</div>
+            <p class="src-note">Sources: LA City Clerk, Measure PL pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed argument); Council File 26-1100-S12.</p>
+          </div>
+        </article>
+      </section>
+
+        <article class="prop" id="m-ee" data-scope="city" data-mid="ee">
+          <header>
+            <div class="big-num">EE</div>
+            <div>
+              <p class="type">City of Los Angeles · Charter Amendment · Majority to pass</p>
+              <h2>Ethics, elections, and governance</h2>
+              <p class="also">Official title: City Ethics, Elections, and Governance Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> EE is a bundle of unrelated City Hall rule changes sold under an "ethics" title. It toughens campaign finance penalties, bars Ethics Commission leaders from running for office for five years after leaving, and frees the Police Inspector General and Fire Independent Assessor from being shut down by their own commissions. It also raises the signature bar for voter referendums, and cuts the Charter's required City Council meeting schedule from three days a week to one, a change voters cannot separate from the ethics items.</div>
+          <div class="cost-line"><strong>The money:</strong> There is no official dollar estimate. The City Administrative Officer says fewer Council meetings may save money on translation and closed captioning, the Police and Fire oversight changes may require staff at costs that cannot be determined, and the rest is not expected to have a financial impact.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> Every change in the breakdown below is adopted as a single package.</p>
+            <p><span class="yn-n">A No vote means:</span> The Charter stays as is: the $2,000 penalty cap, the 10 percent referendum threshold, the three day a week Council meeting requirement, and both commissions keep their power to halt an Inspector General or Assessor inquiry.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>What changes, item by item</h3>
+                <ul>
+                  <li><strong>Campaign finance penalties.</strong> The maximum civil penalty per violation rises from $2,000 to the greater of $15,000, adjusted for inflation, or three times the amount improperly reported or unlawfully contributed or spent.</li>
+                  <li><strong>Ethics cooling off period.</strong> The Ethics Commission's Executive Director and Commissioners are barred from running for any City office or the LAUSD school board for at least five years after their last day of service, replacing a narrower two year rule.</li>
+                  <li><strong>Independent Police and Fire oversight.</strong> The Police Commission can no longer order the Inspector General not to start or continue an investigation or audit. The Fire Commission loses the same power over the Independent Assessor.</li>
+                  <li><strong>Fewer required Council meetings.</strong> The Charter requirement drops from regular meetings at least three days each week to at least weekly. Special meetings remain allowed.</li>
+                  <li><strong>Harder referendums.</strong> A petition to overturn a Council ordinance needs signatures equal to 15 percent of the votes cast for Mayor at the last mayoral election, up from 10 percent, roughly 139,500 signatures instead of about 93,000 at 2022 turnout, still gathered within 30 days.</li>
+                  <li><strong>The fine print.</strong> Commission board actions become final after 15 calendar days instead of five Council meeting days (21 days for Police Chief removal). The Charter states the City shall maintain language access policies. And the definition of a Neighborhood Council "stakeholder" moves out of the Charter into ordinance, where the Council can rewrite it alone.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, adopted 12 to 0 on June 30, 2026. Most provisions came from the Charter Reform Commission, created after the City Hall leaked tape scandal. The weekly meeting item was a Council addition: the Council first voted to remove the meeting requirement entirely, then, after pushback from good government groups, settled on "at least weekly." Reporting indicates the Charter Reform Commission had rejected the reduced meeting idea.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Councilmembers Tim McOsker, Katy Yaroslavsky, Marqueece Harris-Dawson, and Eunisses Hernandez, and Charter Reform Commissioner Diego Andrades. Their case: stronger independent oversight of Police and Fire, tougher penalties, a real cooling off period, and a three day a week meeting mandate that is an outlier pulling councilmembers out of their districts.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>The filed argument against is signed by Councilmember Monica Rodriguez alone. Her case: EE is presented as ethics reform, but buried inside it is a cut to Council meetings from three times a week to once, reducing public comment and scrutiny after years of City Hall corruption scandals, and likely reducing the already infrequent Council meetings held in the San Fernando Valley.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>The title leads with "Ethics," but the most contested item, fewer required Council meetings, is a convenience change, not an ethics reform, and it cannot be voted on separately. The ballot question says "prohibit Ethics Commissioners," but the ban also covers the Commission's Executive Director and every City and LAUSD office. "Increase the authority" of the Inspector General and Independent Assessor actually means removing their own commissions' power to stop them. The referendum increase is a 50 percent jump that makes it harder for voters to overturn Council ordinances, with no numbers in the question. And "make other changes" conceals the board timing rules, the language access mandate, and the Neighborhood Council definition move.</div>
+            <p class="src-note">Sources: LA City Clerk, Measure EE pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed arguments); Council File 26-1100-S13.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-prk" data-scope="city" data-mid="prk">
+          <header>
+            <div class="big-num">PRK</div>
+            <div>
+              <p class="type">City of Los Angeles · Charter Amendment · Majority to pass</p>
+              <h2>Recreation and Parks budget</h2>
+              <p class="also">Official title: City Department of Recreation and Parks Budget Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> The Charter already guarantees the Parks department a minimum slice of the City budget, currently about $303 million a year. PRK doubles that guaranteed minimum over ten years, phased in starting in fiscal 2027-28. It raises no tax and creates no new money, so every added dollar is reallocated from other city services.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer estimates Parks funding under the formula rises from $303 million to $995 million a year by 2036-37, with the measure itself adding an estimated $32 million in 2027-28, growing to about $497 million a year at full phase in. The CAO states the City must reallocate resources from other services, including public safety, public works, and homeless services, to pay for it.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The doubled minimum is locked into the Charter on the ten year phase in, with a fiscal emergency exception.</p>
+            <p><span class="yn-n">A No vote means:</span> The minimum stays where it is. The Council remains free to give Parks more, or not, year by year through the normal budget process.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li><strong>The formula today:</strong> a minimum of 0.0325 percent of the assessed value of all property in the city, paid from the General Fund. PRK raises it in ten equal steps to 0.065 percent in fiscal 2036-37.</li>
+                  <li><strong>Emergency valve:</strong> if the Council declares a fiscal emergency by a two thirds vote, it may cut the required amount by up to 30 percent for the duration, but never below today's floor.</li>
+                  <li><strong>Context from the official summary:</strong> the separate Proposition K parks assessment, which has raised $25 million a year since 1996, expires in fiscal 2026-27, and the official analysis says the current Charter rate has not kept pace with population, system growth, and operating costs.</li>
+                  <li><strong>Expert pushback:</strong> the Chief Legislative Analyst advised against putting a funding obligation in the Charter at all, suggesting an ordinance or a smaller increase instead.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council. The doubling was recommended 10 to 0 by the Charter Reform Commission in April 2026, an idea it credited to a coalition of park advocates. A Council committee first backed a smaller increase; the full doubling over ten years was adopted 14 to 1, with Councilmember Bob Blumenfield the only no vote.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Councilmembers Monica Rodriguez, Ysabel Jurado, and Imelda Padilla, City Controller Kenneth Mejia, a Parks Commissioner, Rev. Gregory Boyle of Homeboy Industries, and the Boys and Girls Club of the San Fernando Valley, among others. A wider coalition includes the Trust for Public Land, TreePeople, and Friends of the Los Angeles River. Their claims: Los Angeles funds parks two thirds less than similar cities, facilities need almost $3 billion in repairs, and protected parks funding has not increased since 1937.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was submitted for the pamphlet. The Los Angeles Police Protective League opposes it as an example of "ballot box budgeting," and Councilmember Blumenfield was the lone Council vote against advancing it. The substantive counterpoint comes from the City's own analysts: the money is reallocated from other services, and the mandate binds future budgets regardless of conditions.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>"Increase the minimum budget" is accurate but abstract; the ballot question never states the dollar scale, roughly $995 million a year by 2036-37 on the City's own estimate. It does not disclose that no new money exists, and that the increase is paid by reallocating General Fund money from other services. "Exceptions for fiscal emergencies" can cut the requirement by up to 30 percent. Supporters' "without raising taxes by a single penny" line is literally true and incomplete: it locks a permanent spending priority into the Charter that future Councils cannot undo without another vote of the people, and most of the cost lands on budgets a decade from now.</div>
+            <p class="src-note">Sources: LA City Clerk, Measure PRK pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed argument); Council File 26-1100-S15.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-prt" data-scope="city" data-mid="prt">
+          <header>
+            <div class="big-num">PRT</div>
+            <div>
+              <p class="type">City of Los Angeles · Charter Amendment · Majority to pass</p>
+              <h2>Airports, Harbor, and Water and Power departments</h2>
+              <p class="also">Official title: City Airports, Harbor, and Water and Power Departments Charter Amendment</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> Four unrelated changes bundled into one vote, touching the City's three self funded departments. The airports department and the DWP could sign leases up to 66 years instead of 50. Five of the seven Airport Commissioners would have to live near LAX or Van Nuys Airport, up from two. And the Port of LA's existing practices of spending on waterfront public access and requiring job impact reports from lease applicants would be written into the Charter. Nothing in it changes DWP rates, budgets, leadership, or the money any department sends to the City.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer calls the lease, board, and disclosure changes cost neutral; the disclosures are paid for by the applicants themselves. The Port item locks in existing spending, historically about $28.6 million a year, rather than creating a new cost.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The four changes in the breakdown below are written into the Charter.</p>
+            <p><span class="yn-n">A No vote means:</span> The Charter stays unchanged. The 50 year lease cap, the current airport residency rule, and the Port's public access spending and disclosure practices remain board policy that a future board can change.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>What changes, item by item</h3>
+                <ul>
+                  <li><strong>Longer leases.</strong> The default lease cap stays 30 years. If the Council finds a longer term is in the City's best interest, it may, by a two thirds vote, authorize up to 66 years for the airports department and the DWP. The Harbor Department already had the 66 year cap; this aligns the other two.</li>
+                  <li><strong>Airport Commission residency.</strong> At least three of the seven commissioners must live in the area around LAX, up from one, and at least two around Van Nuys Airport, up from one. The areas are defined by ordinance. Appointment and removal rules do not change.</li>
+                  <li><strong>Port public access money.</strong> The Harbor Commission must allocate part of the Port's operating income each year to a Public Access Investment Plan for waterfront projects, developed with public input. The Commission alone sets the amount each year; the Charter sets no percentage or floor.</li>
+                  <li><strong>Port workforce disclosures.</strong> Applicants for Port leases and major Harbor District developments must report estimated effects on jobs at the site and on the regional economy. The Board must consider the reports and may exempt small businesses and nonprofits from the economic impact part.</li>
+                  <li><strong>What is not in it:</strong> no change to general manager hiring or firing at any of the three departments, no change to transfers of funds to the City, and no change to DWP rate setting or budget authority.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, adopted 13 to 0 on June 30, 2026. Its pieces arrived separately during the charter review: the lease alignment from the Charter Reform Commission, the airport residency change from Councilmembers Traci Park and Imelda Padilla, and the Port items from Councilmember Tim McOsker. An earlier draft also included a Port Warden pension change; the Council removed it, and it is not in the measure voters are deciding.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Councilmembers Tim McOsker, Imelda Padilla, and Traci Park, plus neighborhood and community advocates from Westchester, Wilmington, and Van Nuys. Their case: airport neighbors who live with the noise and traffic deserve more seats on the Airport Commission, the Port's public access and job impact practices are existing commitments that should be locked in, and longer leases allow responsible long term investment with public oversight.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was submitted for the pamphlet. The Harbor Department itself objected during the Council process, arguing that writing its public access plan and leasing policy into the Charter limits the Commission's discretion under state law, and that workforce reports may burden applicants and discourage them. The LA Area Chamber of Commerce urged the Council to reject codification, warning of longer lease negotiations. The longshore unions, ILWU Locals 13, 63, and 94, supported the workforce report.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>DWP is named in the title as if it were a co-equal subject, but the only DWP change is longer leases; nothing touches its rates, budgets, leadership, or transfers to the City. "Increase maximum terms for certain leases" never says the change is 50 to 66 years, or that anything over 30 years still needs a two thirds Council vote. The question says the Harbor Department must "allocate funds" for waterfront access, but the text sets no amount: the often quoted "10 percent, about $28.6 million" is current practice described by the CAO, and the Harbor Commission could allocate less. The question also omits the small business and nonprofit exemption from part of the workforce disclosure.</div>
+            <p class="src-note">Sources: LA City Clerk 2026 voter information pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed argument); Council File 26-1100-S16.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-sc" data-scope="lausd" data-mid="sc">
+          <header>
+            <div class="big-num">SC</div>
+            <div>
+              <p class="type">Los Angeles Unified School District · Charter Amendment · Majority to pass</p>
+              <h2>Campaign finance rules for school board elections</h2>
+              <p class="also">Official title: Campaign Finance Rules Related to Board of Education Elections. This one is decided by LAUSD voters, including some who live outside the City of Los Angeles.</p>
+            </div>
+          </header>
+          <div class="check-banner" id="scCheck"><strong>Check before you rely on this card:</strong> SC is on your ballot only if your home is inside the Los Angeles Unified School District. The district covers the City of Los Angeles and parts of several other cities. If you vote in another school district, skip this one.</div>
+          <div class="plain"><strong>In plain English:</strong> School board candidates currently have their own campaign finance rulebook, written into the City Charter by voters in 2007. SC deletes it and puts school board candidates under the same rules as mayoral candidates, with three exceptions: they can still take contributions from registered lobbyists and from city contract bidders, they do not get public matching funds, and the City Council can change their rules by ordinance later without asking voters.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer states the measure is not anticipated to have a financial impact on the City. No other official cost estimate exists.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The separate school board rulebook is removed, mayoral campaign finance rules apply with the three exceptions above, and the City Council can adopt further changes by ordinance.</p>
+            <p><span class="yn-n">A No vote means:</span> The existing standalone rules for school board candidates stay in the Charter, and future changes need voter approved Charter amendments.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li>The shared mayoral rules include contribution limits (a $1,000 per person baseline, periodically adjusted, with no limit on a candidate spending their own money), campaign account and disclosure requirements, fundraising time windows, and Ethics Commission audit, investigation, and enforcement powers, on top of state law.</li>
+                  <li>Exception one: the ban on contributions from lobbyists registered to lobby the office sought, which applies to mayoral candidates, does not apply to school board candidates.</li>
+                  <li>Exception two: the ban on contributions and fundraising by people bidding on city contracts of $100,000 or more, and their subcontractors and principals, also does not apply.</li>
+                  <li>Exception three: school board candidates are not eligible for the public matching funds program.</li>
+                  <li>The power to add further exceptions or restrictions by ordinance goes to the Los Angeles City Council, not the school board and not voters.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>The City Council, by a 14 to 0 vote, out of the 2025-26 charter reform process. The separate school board rules it replaces date to Charter Amendment L, approved by voters in 2007.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Councilmember Adrin Nazarian, LAUSD Board Member Nick Melvoin, former Charter Reform Commissioner Diego Andrades, California Common Cause, and the League of Women Voters of Greater Los Angeles. Their case: a good governance reform that simplifies the Charter, removes duplicative provisions, and puts school board candidates under the same general framework as mayoral candidates.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>No argument against was submitted for the pamphlet. The SAJE voter guide recommends no: the exemptions leave school board candidates free to take lobbyist and contract bidder money, they get no public matching funds, and SAJE argues the rewrite also narrows who may sue over campaign finance violations, a reading of the text that has not been independently confirmed. Reform California and the Daily News editorial position oppose it because the Council gains the power to change school board campaign finance rules by ordinance instead of voters.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>"Clarify" makes SC sound like housekeeping. The operative act is bigger: it repeals a voter approved rulebook and moves future rule changes from voters to the City Council. The ballot question never mentions the three exceptions, so the rules are similar to the mayoral rules, not the same. "Allow for changes by ordinance" never says who gets that power: the Los Angeles City Council, including the power to create new exceptions. And "Board of Education" is the LAUSD school board, which is why some voters outside the City of Los Angeles vote on it too.</div>
+            <p class="src-note">Sources: LA City Clerk, LAUSD voter information pamphlet ENG301 (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed argument); Council File 26-1100-S19.</p>
+          </div>
+        </article>
+
+        <article class="prop" id="m-fd" data-scope="city" data-mid="fd">
+          <header>
+            <div class="big-num">FD</div>
+            <div>
+              <p class="type">City of Los Angeles · Citizen Initiative Ordinance · Majority to pass</p>
+              <h2>A half percent sales tax for the Fire Department</h2>
+              <p class="also">Official title: Funding for the Los Angeles Fire Department Through a One-Half Percent Sales Tax</p>
+            </div>
+          </header>
+          <div class="plain"><strong>In plain English:</strong> FD adds a new 0.5 percent sales tax in the City of Los Angeles, dedicated entirely to the Fire Department, on top of its regular budget. The money goes into a locked fund for hiring firefighters and paramedics, trucks, ambulances and helicopters, fire stations, emergency communications, and brush clearance. It has no end date. One protection is built in: the tax can only be collected in years when the City keeps its regular Fire Department funding at a baseline level, so the new money supplements the budget instead of replacing it.</div>
+          <div class="cost-line"><strong>The money:</strong> The City Administrative Officer estimates about $345 million a year, raising the city sales tax rate from 10.25 percent to 10.75 percent. The tax starts about 110 days after approval and stays in place until voters repeal it. Opponents put the cost at about $86 per person per year.</div>
+          <div class="yesno">
+            <p><span class="yn-y">A Yes vote means:</span> The 0.5 percent sales tax is established and the money flows to the dedicated Fire Department fund, with annual audits and a five member citizens oversight committee.</p>
+            <p><span class="yn-n">A No vote means:</span> The tax is not established, and the Fire Department continues to be funded through the normal City budget process.</p>
+          </div>
+          <button class="more-btn" type="button" aria-expanded="false">Full breakdown <span class="chev">▾</span></button>
+          <div class="prop-details" hidden>
+            <div class="fact-grid">
+              <div class="fact" style="grid-column:1/-1">
+                <h3>The details</h3>
+                <ul>
+                  <li><strong>Maintenance of effort:</strong> the tax can be levied only in years when the City maintains Fire Department funding at its average share of discretionary funding over the prior ten fiscal years. If the City misses that baseline, the tax cannot be collected that year.</li>
+                  <li><strong>Why a majority is enough:</strong> earmarked special taxes normally need two thirds approval under the state constitution, but because FD arrived by citizen initiative, a simple majority passes it. Statewide Proposition 43 on this same ballot is aimed at closing that route for future measures, so how you vote on Prop 43 and FD is connected.</li>
+                  <li>Funded fire station construction is subject to project labor agreements and prevailing wage rules, per the official analysis; the ballot question does not mention this.</li>
+                </ul>
+              </div>
+              <div class="fact">
+                <h3>Who put it on the ballot</h3>
+                <p>Voters did, by signature gathering. It qualified through a citizen sponsored initiative petition, and the argument in favor says Los Angeles firefighters and paramedics wrote it. News coverage identifies the sponsor as United Firefighters of Los Angeles City Local 112, the rank and file firefighters union.</p>
+              </div>
+              <div class="fact">
+                <h3>Who supports it</h3>
+                <p>The filed argument in favor is signed by Doug Coates, President of United Firefighters of LA City, and Fire Chief Jaime Moore, and names the LAFD Chief Officers Association, California Professional Firefighters, and the International Association of Fire Fighters. Mayor Karen Bass and City Council members also support it. Their case: response times run nearly twice the national four minute standard, staffing has not grown since 1965 while the population grew by more than half, and because the money is locked, audited, and protected by the maintenance of effort rule, City Hall cannot divert it.</p>
+              </div>
+              <div class="fact">
+                <h3>Who opposes it</h3>
+                <p>The filed argument against and the rebuttal are both signed by the Howard Jarvis Taxpayers Association. Their case: a permanent tax taking the rate to 10.75 percent, the third sales tax increase in two years, passed by majority through what they call a loophole, when the City should fully fund the Fire Department from its existing budget of over $8.1 billion in General Fund revenue. The Los Angeles Police Protective League also opposes it, calling it a permanent "forever tax," and announced it would spend several million dollars against it.</p>
+              </div>
+            </div>
+            <div class="wording"><span class="wh">Wording watch</span>"Until ended by voters" is the only hint in the ballot question that this tax is permanent; there is no sunset, and the question never uses the word permanent. The question leads with a long list of popular uses, hiring firefighters, fire stations, brush clearance, before it mentions the tax itself. And "supplemental" funding is not automatic: the protection is the maintenance of effort rule, whose flip side is that the tax cannot be collected at all in a year the City misses the baseline.</div>
+            <p class="src-note">Sources: LA City Clerk, Measure FD pamphlet (Chief Legislative Analyst impartial summary, City Administrative Officer financial impact statement, measure text, filed arguments and rebuttals).</p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Your local cheat sheet</h2>
+          <p>Mark your call on each card above and it lands here. Your calls and notes are saved only on this device. Print the sheet or download it as a text file to take to your ballot.</p>
+        </div>
+        <div class="summary-card">
+          <h2>My local ballot decisions</h2>
+          <p class="sub">Los Angeles County and City measures, November 3, 2026. Only the measures on your ballot, based on your pick above, are listed.</p>
+          <div id="sumRows"></div>
+          <button class="dl-btn" id="downloadBtn" type="button">Download as text</button>
+          <button class="dl-btn ghost" id="printBtn" type="button">Print cheat sheet</button>
+          <p class="session-note">Saved on this device only. Nothing you mark here is sent anywhere.</p>
+        </div>
+      </section>
+
+      <section class="caveats">
+        <h2>How to read this page</h2>
+        <ul>
+          <li>Every fact here comes from the official voter pamphlets and the impartial analyses written by the County Counsel, the County Auditor-Controller, the City's Chief Legislative Analyst, and the City Administrative Officer. Where a claim comes from a campaign argument, the card says so and names who signed it.</li>
+          <li>Unlike the statewide propositions, most of these measures have no public polling, so none is shown. Several also have no organized opposition; where no argument against was filed, the card says that plainly instead of inventing one.</li>
+          <li>Campaign money figures are from filings through the dates stated on each card and will keep changing up to Election Day.</li>
+          <li>This page is educational and is not affiliated with any campaign, candidate, or government agency. The official texts control; if anything here conflicts with your voter pamphlet, the pamphlet is right.</li>
+        </ul>
+      </section>
+
+      <section class="sources">
+        <h2>Sources</h2>
+        <ul>
+          <li>Los Angeles County Registrar-Recorder/County Clerk, Measures Appearing on the Ballot, November 3, 2026: <a href="https://www.lavote.gov" target="_blank" rel="noopener">lavote.gov</a></li>
+          <li>County Counsel impartial analysis and County Auditor-Controller fiscal impact statements for Measures A and E (lavote.gov measure documents).</li>
+          <li>LA City Clerk, Ballot Measures, 2026 General Municipal Election: <a href="https://clerk.lacity.gov/elections/municipal-elections/ballot-measures" target="_blank" rel="noopener">clerk.lacity.gov/elections/municipal-elections/ballot-measures</a></li>
+          <li>LA City Clerk, 2026 voter information pamphlets ENG101 (City of Los Angeles) and ENG301 (LAUSD), including the Chief Legislative Analyst impartial summaries, City Administrative Officer financial impact statements, full measure texts, and filed arguments for Measures TE, LA, PL, EE, PRK, PRT, SC, and FD.</li>
+          <li>Reporting used only for campaign and process details, credited on the cards: CityHallPass, LA Public Press, MyNewsLA, LA Forward, SAJE voter guide.</li>
+        </ul>
+        <p class="src-note">Researched and written November 2, 2026, from the sources above.</p>
+      </section>
+
+      <footer>
+        <p>An independent, educational voter guide for the November 3, 2026 general election. Not affiliated with any campaign or government agency. For the statewide propositions, see the <a href="/">companion guide</a>. Mail ballots count if postmarked by November 3 and received by November 10.</p>
+      </footer>
+    </div>
+
+    <script>
+      const MEASURES = [
+        { id: "a", label: "Measure A", short: "A", title: "Binding arbitration for public safety labor disputes", scope: "county" },
+        { id: "e", label: "Measure E", short: "E", title: "Ethics Commission rules and the Measure J funding promise", scope: "county" },
+        { id: "te", label: "Prop TE", short: "TE", title: "Transfer tax exemption for Palisades Fire victims", scope: "city" },
+        { id: "la", label: "Measure LA", short: "LA", title: "Infrastructure, budget, finance, and contracting", scope: "city" },
+        { id: "pl", label: "Measure PL", short: "PL", title: "Planning Department and land use appeals", scope: "city" },
+        { id: "ee", label: "Measure EE", short: "EE", title: "Ethics, elections, and governance", scope: "city" },
+        { id: "prk", label: "Measure PRK", short: "PRK", title: "Recreation and Parks budget", scope: "city" },
+        { id: "prt", label: "Measure PRT", short: "PRT", title: "Airports, Harbor, and Water and Power departments", scope: "city" },
+        { id: "sc", label: "Measure SC", short: "SC", title: "Campaign finance rules for school board elections", scope: "lausd" },
+        { id: "fd", label: "Measure FD", short: "FD", title: "Half percent sales tax for the Fire Department", scope: "city" }
+      ];
+      const CALL_KEY = "localGuide2026";
+      const PICK_KEY = "localGuidePick2026";
+      let calls = {};
+      try { calls = JSON.parse(localStorage.getItem(CALL_KEY) || "{}"); } catch (e) { calls = {}; }
+      let pick = null;
+      try { pick = localStorage.getItem(PICK_KEY); } catch (e) { pick = null; }
+
+      const applicable = () => {
+        if (pick === "lacity") return MEASURES.map(m => m.id);
+        if (pick === "county") return ["a", "e", "sc"];
+        if (pick === "outside") return [];
+        return MEASURES.map(m => m.id);
+      };
+
+      function save() { try { localStorage.setItem(CALL_KEY, JSON.stringify(calls)); } catch (e) {} }
+
+      function buildNav() {
+        const nav = document.getElementById("jumpnav");
+        nav.innerHTML = "";
+        MEASURES.forEach(m => {
+          const a = document.createElement("a");
+          a.href = "#m-" + m.id; a.textContent = m.short; a.dataset.mid = m.id;
+          if (calls[m.id] && calls[m.id].call) a.classList.add("done");
+          nav.appendChild(a);
+        });
+      }
+
+      function buildCalls() {
+        MEASURES.forEach(m => {
+          const art = document.querySelector('article[data-mid="' + m.id + '"]');
+          if (!art) return;
+          const box = document.createElement("div");
+          box.className = "yourcall";
+          const cur = calls[m.id] || {};
+          box.innerHTML =
+            '<span class="lbl">Your call on ' + m.label + '</span>' +
+            '<div class="call-btns">' +
+            '<button type="button" class="call-btn yes" data-call="yes" aria-pressed="' + (cur.call === "yes") + '">Yes</button>' +
+            '<button type="button" class="call-btn no" data-call="no" aria-pressed="' + (cur.call === "no") + '">No</button>' +
+            '<button type="button" class="call-btn und" data-call="und" aria-pressed="' + (cur.call === "und") + '">Still deciding</button>' +
+            '</div>' +
+            '<input class="note-input" type="text" placeholder="Add a note (optional)" value="' + (cur.note ? cur.note.replace(/"/g, "&quot;") : "") + '" aria-label="Note for ' + m.label + '">';
+          box.querySelectorAll(".call-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+              const v = btn.dataset.call;
+              calls[m.id] = calls[m.id] || {};
+              calls[m.id].call = (calls[m.id].call === v) ? null : v;
+              save(); refresh();
+            });
+          });
+          const input = box.querySelector(".note-input");
+          input.addEventListener("input", () => {
+            calls[m.id] = calls[m.id] || {};
+            calls[m.id].note = input.value;
+            save(); renderSummary();
+          });
+          art.appendChild(box);
+        });
+      }
+
+      function renderSummary() {
+        const wrap = document.getElementById("sumRows");
+        const ids = applicable();
+        if (!ids.length) {
+          wrap.innerHTML = '<div class="sum-row"><span class="t">None of the measures on this page are on your ballot.</span></div>';
+          return;
+        }
+        wrap.innerHTML = "";
+        MEASURES.filter(m => ids.includes(m.id)).forEach(m => {
+          const c = calls[m.id] || {};
+          const row = document.createElement("div");
+          row.className = "sum-row";
+          let callHtml = '<span class="sum-call none">Not decided</span>';
+          if (c.call === "yes") callHtml = '<span class="sum-call yes">YES</span>';
+          if (c.call === "no") callHtml = '<span class="sum-call no">NO</span>';
+          if (c.call === "und") callHtml = '<span class="sum-call und">UNDECIDED</span>';
+          row.innerHTML = '<span class="n">' + m.label + '</span><span class="t">' + m.title + '</span>' + callHtml +
+            (c.note ? '<span class="note">' + c.note.replace(/</g, "&lt;") + '</span>' : "");
+          wrap.appendChild(row);
+        });
+      }
+
+      function renderCount() {
+        const ids = applicable();
+        const decided = ids.filter(id => calls[id] && calls[id].call).length;
+        document.getElementById("decidedCount").textContent =
+          pick === "outside" ? "Not an LA County ballot" : decided + " of " + ids.length + " decided";
+        document.querySelectorAll("#jumpnav a").forEach(a => {
+          const id = a.dataset.mid;
+          a.classList.toggle("done", !!(calls[id] && calls[id].call));
+          a.style.display = ids.includes(id) ? "" : "none";
+        });
+      }
+
+      function applyPick() {
+        document.querySelectorAll(".pick-btn").forEach(b => b.setAttribute("aria-pressed", b.dataset.pick === pick ? "true" : "false"));
+        const res = document.getElementById("pickResult");
+        const show = (el, on) => document.getElementById(el).classList.toggle("show", !!on);
+        show("countyNote", pick === "county");
+        show("outsideNote", pick === "outside");
+        document.querySelectorAll("article.prop").forEach(art => {
+          const scope = art.dataset.scope;
+          let vis = true;
+          if (pick === "county") vis = (scope === "county" || scope === "lausd");
+          if (pick === "outside") vis = false;
+          art.style.display = vis ? "" : "none";
+        });
+        const cityHead = document.querySelector("#citySection .section-head");
+        if (cityHead) cityHead.style.display = (pick === "outside") ? "none" : "";
+        const scCheck = document.getElementById("scCheck");
+        if (scCheck) scCheck.classList.toggle("show", pick === "county");
+        if (pick === "lacity") { res.textContent = "Showing all 10 measures: the 2 county measures and the 8 city measures are all on a City of Los Angeles ballot."; res.classList.add("show"); }
+        else if (pick === "county") { res.textContent = "Showing the 2 county measures, plus Measure SC flagged for LAUSD voters. The 8 City of Los Angeles measures are hidden, since they are not on your ballot."; res.classList.add("show"); }
+        else if (pick === "outside") { res.textContent = "The measure cards are hidden, since none of them are on your ballot. The statewide guide linked at the top still applies to you."; res.classList.add("show"); }
+        else res.classList.remove("show");
+        renderCount(); renderSummary();
+      }
+
+      function refresh() {
+        document.querySelectorAll("article.prop").forEach(art => {
+          const id = art.dataset.mid;
+          const cur = calls[id] || {};
+          art.querySelectorAll(".call-btn").forEach(b => b.setAttribute("aria-pressed", cur.call === b.dataset.call ? "true" : "false"));
+        });
+        renderCount(); renderSummary();
+      }
+
+      document.querySelectorAll(".pick-btn").forEach(b => {
+        b.addEventListener("click", () => {
+          pick = (pick === b.dataset.pick) ? null : b.dataset.pick;
+          try { localStorage.setItem(PICK_KEY, pick || ""); } catch (e) {}
+          if (!pick) { try { localStorage.removeItem(PICK_KEY); } catch (e) {} }
+          applyPick();
+        });
+      });
+
+      document.querySelectorAll(".more-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const details = btn.nextElementSibling;
+          const open = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!open));
+          details.hidden = open;
+          btn.firstChild.textContent = open ? "Full breakdown " : "Hide breakdown ";
+        });
+      });
+
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        const ids = applicable();
+        let txt = "My local ballot cheat sheet\nLos Angeles County and City measures, November 3, 2026\n\n";
+        MEASURES.filter(m => ids.includes(m.id)).forEach(m => {
+          const c = calls[m.id] || {};
+          const call = c.call === "yes" ? "YES" : c.call === "no" ? "NO" : c.call === "und" ? "UNDECIDED" : "Not decided";
+          txt += m.label + "  " + m.title + "\n  My call: " + call + (c.note ? "\n  Note: " + c.note : "") + "\n\n";
+        });
+        txt += "Mail ballots count if postmarked by Nov 3 and received by Nov 10.\n";
+        const blob = new Blob([txt], { type: "text/plain" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "local-ballot-cheat-sheet.txt";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      });
+      document.getElementById("printBtn").addEventListener("click", () => window.print());
+
+      buildNav();
+      buildCalls();
+      applyPick();
+      refresh();
+    </script>
+  </body>
+</html>
